@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHSHomeViewController">
+            <connections>
+                <outlet property="tableview" destination="e5j-c5-PDi" id="wMq-o6-vXg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zhishiView" destination="Ng6-7H-4od" id="Tsh-EI-xda"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-c5-PDi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="e5j-c5-PDi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="REG-F6-P8X"/>
+                <constraint firstItem="e5j-c5-PDi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o5I-K0-ku1"/>
+                <constraint firstAttribute="bottom" secondItem="e5j-c5-PDi" secondAttribute="bottom" id="qpf-8V-7gR"/>
+                <constraint firstAttribute="trailing" secondItem="e5j-c5-PDi" secondAttribute="trailing" id="qyw-cc-ODP"/>
+            </constraints>
+            <point key="canvasLocation" x="288" y="290"/>
+        </view>
+        <view alpha="0.80000000000000004" contentMode="scaleToFill" id="Ng6-7H-4od">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_zhishi_BG" translatesAutoresizingMaskIntoConstraints="NO" id="4cv-BB-0a3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_zhishi_shou" translatesAutoresizingMaskIntoConstraints="NO" id="w7R-po-93d">
+                    <rect key="frame" x="152.5" y="527" width="70" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="SkL-AD-JFg"/>
+                        <constraint firstAttribute="height" constant="120" id="ZJu-vC-6mx"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4cv-BB-0a3" firstAttribute="leading" secondItem="Ng6-7H-4od" secondAttribute="leading" id="9iK-4M-DXU"/>
+                <constraint firstItem="4cv-BB-0a3" firstAttribute="top" secondItem="Ng6-7H-4od" secondAttribute="top" id="dLS-qz-sCY"/>
+                <constraint firstAttribute="bottom" secondItem="4cv-BB-0a3" secondAttribute="bottom" id="gxt-OC-39F"/>
+                <constraint firstAttribute="bottom" secondItem="w7R-po-93d" secondAttribute="bottom" constant="20" id="q9T-6h-Cwk"/>
+                <constraint firstItem="w7R-po-93d" firstAttribute="centerX" secondItem="Ng6-7H-4od" secondAttribute="centerX" id="wn5-d8-aNx"/>
+                <constraint firstAttribute="trailing" secondItem="4cv-BB-0a3" secondAttribute="trailing" id="xLP-W5-5eh"/>
+            </constraints>
+            <point key="canvasLocation" x="348" y="-312"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="index_zhishi_BG" width="375" height="667"/>
+        <image name="index_zhishi_shou" width="69" height="125"/>
+    </resources>
+</document>

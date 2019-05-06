@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHSMyCenterOrderViewController">
+            <connections>
+                <outlet property="tableview" destination="d5B-uw-a1d" id="VBq-jO-EBu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0x-oS-Ehe">
+                    <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBJ-3k-7TO">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="继续兑换">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.40392156862745099" green="0.7803921568627451" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lBJ-3k-7TO" secondAttribute="bottom" id="1iM-pM-eGE"/>
+                        <constraint firstItem="lBJ-3k-7TO" firstAttribute="top" secondItem="i0x-oS-Ehe" secondAttribute="top" id="1t3-qJ-LjL"/>
+                        <constraint firstAttribute="trailing" secondItem="lBJ-3k-7TO" secondAttribute="trailing" id="IBh-Wd-gX5"/>
+                        <constraint firstItem="lBJ-3k-7TO" firstAttribute="leading" secondItem="i0x-oS-Ehe" secondAttribute="leading" id="LoC-Fg-iR3"/>
+                        <constraint firstAttribute="height" constant="49" id="v91-8J-reb"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5B-uw-a1d">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="i0x-oS-Ehe" secondAttribute="bottom" id="Gk0-I9-jJc"/>
+                <constraint firstAttribute="trailing" secondItem="d5B-uw-a1d" secondAttribute="trailing" id="KAD-uX-mW7"/>
+                <constraint firstItem="i0x-oS-Ehe" firstAttribute="top" secondItem="d5B-uw-a1d" secondAttribute="bottom" id="Mq7-Rw-VGI"/>
+                <constraint firstItem="i0x-oS-Ehe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PlC-gn-4nO"/>
+                <constraint firstAttribute="trailing" secondItem="i0x-oS-Ehe" secondAttribute="trailing" id="aPo-Ce-0G4"/>
+                <constraint firstItem="d5B-uw-a1d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qrN-n4-ipY"/>
+                <constraint firstItem="d5B-uw-a1d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sIE-yU-or1"/>
+            </constraints>
+            <point key="canvasLocation" x="268" y="295"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="q8S-Hj-mBu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--相簿-->
+        <scene sceneID="dfl-ZP-R1f">
+            <objects>
+                <viewController id="LaA-1C-onx" customClass="TNAlbumFolerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pyh-vY-xBo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vl7-BO-q1U">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TNAlbumFolderTableViewCell" rowHeight="84" id="GMP-ww-LJd" customClass="TNAlbumFolderTableViewCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMP-ww-LJd" id="1Qv-hO-Awx">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="B2X-5p-bgY">
+                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="相机胶卷" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Al-29-2vf">
+                                                    <rect key="frame" x="86" y="32" width="63" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(174)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yed-Tr-Muq">
+                                                    <rect key="frame" x="156" y="32" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="5Al-29-2vf" id="jaB-IV-WLE"/>
+                                            <outlet property="numberLabel" destination="yed-Tr-Muq" id="2x3-5O-7Eu"/>
+                                            <outlet property="posterImageView" destination="B2X-5p-bgY" id="XQ6-3P-tE4"/>
+                                            <segue destination="8Tp-8k-Caa" kind="push" identifier="TNAlbumDetailViewController" id="ZBn-Ul-cVX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LaA-1C-onx" id="aPb-uH-wXd"/>
+                                    <outlet property="delegate" destination="LaA-1C-onx" id="25S-EK-WDa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="相簿" id="Unm-8U-C0y">
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="Tnu-k2-ECF">
+                            <connections>
+                                <action selector="didCancelButtonClick:" destination="LaA-1C-onx" id="Zr7-Rs-bEr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="vl7-BO-q1U" id="Lmq-kx-Zyq"/>
+                        <segue destination="8Tp-8k-Caa" kind="push" identifier="Cancel" id="Day-Pe-seo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxu-BR-LKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="-387"/>
+        </scene>
+        <!--Album Picker View Controller-->
+        <scene sceneID="EOW-yl-uzW">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="q8S-Hj-mBu" customClass="TNAlbumPickerViewController" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kiq-AJ-U6r">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LaA-1C-onx" kind="relationship" relationship="rootViewController" id="sgh-kh-FGl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPh-W7-pmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-382"/>
+        </scene>
+        <!--相机胶卷-->
+        <scene sceneID="Vgi-qW-dSG">
+            <objects>
+                <viewController storyboardIdentifier="TNAlbumDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Tp-8k-Caa" customClass="TNAlbumDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nYc-We-97r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="K0t-0D-war">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TNAlbumDetailTableViewCell" rowHeight="79" id="AEF-1r-MyC" customClass="TNAlbumDetailTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AEF-1r-MyC" id="cGf-Q1-hiJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Gwq-yN-dI7" userLabel="Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView tag="1" contentMode="scaleToFill" id="RLc-d9-mh8" userLabel="Image View 1">
+                                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <gestureRecognizers/>
+                                                        </imageView>
+                                                        <imageView tag="2" contentMode="scaleToFill" id="VNm-Eo-Tp5" userLabel="Image View 2">
+                                                            <rect key="frame" x="83" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <gestureRecognizers/>
+                                                        </imageView>
+                                                        <imageView tag="3" contentMode="scaleToFill" id="eyv-Yh-cMM" userLabel="Image View 3">
+                                                            <rect key="frame" x="162" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <gestureRecognizers/>
+                                                        </imageView>
+                                                        <imageView tag="4" contentMode="scaleToFill" id="v9F-0B-4Sg" userLabel="Image View 4">
+                                                            <rect key="frame" x="241" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <gestureRecognizers/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" id="5JZ-uI-niS" userLabel="Overlay View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view tag="1" contentMode="scaleToFill" id="2eA-7O-gbV" userLabel="Overlay 1">
+                                                            <rect key="frame" x="4" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="album_photo_unselect" highlightedImage="album_photo_selected" id="wa0-b2-tn5">
+                                                                    <rect key="frame" x="46" y="5" width="24" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view tag="2" contentMode="scaleToFill" id="mer-aS-6S3" userLabel="Overlay 2">
+                                                            <rect key="frame" x="83" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="album_photo_unselect" highlightedImage="album_photo_selected" id="UHg-Wb-hhq">
+                                                                    <rect key="frame" x="46" y="5" width="24" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view tag="3" contentMode="scaleToFill" id="pbF-GY-2gh" userLabel="Overlay 3">
+                                                            <rect key="frame" x="162" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="album_photo_unselect" highlightedImage="album_photo_selected" id="2dW-iM-yEB">
+                                                                    <rect key="frame" x="46" y="5" width="24" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view tag="4" contentMode="scaleToFill" id="usJ-hk-63E" userLabel="Overlay 4">
+                                                            <rect key="frame" x="241" y="4" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="album_photo_unselect" highlightedImage="album_photo_selected" id="Dkc-qz-0VG">
+                                                                    <rect key="frame" x="46" y="5" width="24" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageSelectMarkView0" destination="wa0-b2-tn5" id="xti-dU-qiH"/>
+                                            <outlet property="imageSelectMarkView1" destination="UHg-Wb-hhq" id="C9y-hS-T6t"/>
+                                            <outlet property="imageSelectMarkView2" destination="2dW-iM-yEB" id="gHB-BO-tA3"/>
+                                            <outlet property="imageSelectMarkView3" destination="Dkc-qz-0VG" id="Sbv-tF-CUt"/>
+                                            <outlet property="imageViewContainer" destination="Gwq-yN-dI7" id="lRA-w7-VQa"/>
+                                            <outlet property="overlayViewContainer" destination="5JZ-uI-niS" id="7vZ-Xx-Av6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Tp-8k-Caa" id="KY3-oW-rkP"/>
+                                    <outlet property="delegate" destination="8Tp-8k-Caa" id="D8d-Pj-jwl"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="sUN-UY-Xle" userLabel="Toolbar View 1">
+                                <rect key="frame" x="0.0" y="506" width="320" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_cell_separator" id="4XL-81-3JG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NRh-6g-eVB">
+                                        <rect key="frame" x="226" y="14" width="84" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="完成" backgroundImage="album_photo_confirm_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="rect" keyPath="imageView.contentStretch">
+                                                <rect key="value" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneButtonDidClick:" destination="8Tp-8k-Caa" eventType="touchUpInside" id="DXe-nZ-KsK"/>
+                                        </connections>
+                                    </button>
+                                    <imageView tag="1" contentMode="scaleToFill" id="OKI-5Q-5Jq" userLabel="Image View 1">
+                                        <rect key="frame" x="10" y="11" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView tag="2" contentMode="scaleToFill" id="HFf-zr-36D" userLabel="Image View 2">
+                                        <rect key="frame" x="60" y="11" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView tag="3" contentMode="scaleToFill" id="nsd-tO-9e3" userLabel="Image View 3">
+                                        <rect key="frame" x="110" y="11" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView tag="4" contentMode="scaleToFill" id="BEq-fc-3Az" userLabel="Image View 4">
+                                        <rect key="frame" x="160" y="11" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="czn-ZE-SPO" userLabel="Toolbar View 2">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="22a-O6-RJ2">
+                                        <rect key="frame" x="226" y="13" width="84" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="发送" backgroundImage="album_photo_confirm_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="rect" keyPath="imageView.contentStretch">
+                                                <rect key="value" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneButtonDidClick:" destination="8Tp-8k-Caa" eventType="touchUpInside" id="QJ7-XS-2HI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aXT-fX-pKl">
+                                        <rect key="frame" x="10" y="13" width="66" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="预览" backgroundImage="album_preview">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="rect" keyPath="imageView.contentStretch">
+                                                <rect key="value" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="sVp-f8-rfm" kind="push" identifier="Preview" id="8Nh-Tg-cKF"/>
+                                        </connections>
+                                    </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="nGn-v9-prm">
+                                        <rect key="frame" x="59" y="6" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_badge_bg" id="5Ie-mQ-ZrS">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HR6-eX-Tuc">
+                                                <rect key="frame" x="1" y="0.0" width="23" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.27843137254901962" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="相机胶卷" id="0zT-XA-npx">
+                        <barButtonItem key="leftBarButtonItem" title="相册" id="uSH-gM-f6s">
+                            <connections>
+                                <action selector="backButtonDidClick:" destination="8Tp-8k-Caa" id="UJT-OH-4in"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="XZq-nK-arR">
+                            <connections>
+                                <action selector="cancelButtonDidClick:" destination="8Tp-8k-Caa" id="VdU-yE-Oy3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumDoneButton" destination="NRh-6g-eVB" id="0BA-l2-pPF"/>
+                        <outlet property="previewBadgeLabel" destination="HR6-eX-Tuc" id="pwx-0B-6ih"/>
+                        <outlet property="previewBadgeView" destination="nGn-v9-prm" id="20t-Ew-KTn"/>
+                        <outlet property="previewButton" destination="aXT-fX-pKl" id="1cG-mm-GSQ"/>
+                        <outlet property="previewDoneButton" destination="22a-O6-RJ2" id="cLk-zR-WpB"/>
+                        <outlet property="previewToolbarView" destination="czn-ZE-SPO" id="o8k-Cu-vwC"/>
+                        <outlet property="tableView" destination="K0t-0D-war" id="LDi-GV-6IE"/>
+                        <outlet property="toolbarView" destination="sUN-UY-Xle" id="Z1U-D5-I6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0I-f9-8bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="-387"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="14T-nw-6SP">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sVp-f8-rfm" customClass="TNAlbumPreviewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tNg-Ga-ipo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="nHd-qV-o0p" customClass="TNImageListView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sVp-f8-rfm" id="p2J-77-pdw"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" id="eif-lh-PnS" userLabel="Toolbar View">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BMn-d9-qmY">
+                                        <rect key="frame" x="226" y="13" width="84" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="发送" backgroundImage="album_photo_confirm_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="rect" keyPath="imageView.contentStretch">
+                                                <rect key="value" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneButtonDidClick:" destination="sVp-f8-rfm" eventType="touchUpInside" id="Xfh-VN-aqp"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album_fullsize_off" highlightedImage="album_fullsize_on" id="aB4-3G-maF">
+                                        <rect key="frame" x="15" y="22" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原图" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PR4-Cq-Z5R">
+                                        <rect key="frame" x="41" y="20" width="131" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.78823529411764703" green="0.80784313725490198" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S6s-zI-kTy">
+                                        <rect key="frame" x="15" y="13" width="100" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didChangeFullSize:" destination="sVp-f8-rfm" eventType="touchUpInside" id="gby-9k-W0c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.27843137254901962" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OwK-oy-LU5">
+                        <barButtonItem key="leftBarButtonItem" image="navbar_back" id="2M9-eR-wKD">
+                            <inset key="imageInsets" minX="-6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <action selector="backButtonDidClick:" destination="sVp-f8-rfm" id="xCB-bH-Ewo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fullSizeFlagLabel" destination="PR4-Cq-Z5R" id="P4J-LI-fXN"/>
+                        <outlet property="fullSizeFlagView" destination="aB4-3G-maF" id="nMK-N7-jCz"/>
+                        <outlet property="imageListView" destination="nHd-qV-o0p" id="hhq-ML-eBW"/>
+                        <outlet property="toolbarView" destination="eif-lh-PnS" id="tMW-Tq-g5G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGJ-zz-H8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1352" y="-387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="album_fullsize_off" width="16" height="16"/>
+        <image name="album_fullsize_on" width="16" height="16"/>
+        <image name="album_photo_confirm_button" width="82" height="34"/>
+        <image name="album_photo_selected" width="24" height="24"/>
+        <image name="album_photo_unselect" width="24" height="24"/>
+        <image name="album_preview" width="66" height="34"/>
+        <image name="common_badge_bg" width="24" height="24"/>
+        <image name="common_cell_separator" width="320" height="1"/>
+        <image name="navbar_back" width="44" height="33"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Day-Pe-seo"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZHSOrderHeaderTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="38.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRT-Rx-dX8">
+                        <rect key="frame" x="12" y="9" width="56" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="4dg-Vf-FEV"/>
+                            <constraint firstAttribute="height" constant="21" id="a5u-2c-jZJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.34509803919999998" green="0.74901960779999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LRT-Rx-dX8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="j8S-eI-8hf"/>
+                    <constraint firstItem="LRT-Rx-dX8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yb9-Sh-dQu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLable" destination="LRT-Rx-dX8" id="3HC-ft-fvh"/>
+            </connections>
+            <point key="canvasLocation" x="307" y="326.5"/>
+        </tableViewCell>
+    </objects>
+</document>

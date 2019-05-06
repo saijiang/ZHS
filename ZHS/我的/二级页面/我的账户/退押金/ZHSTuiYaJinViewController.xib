@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHSTuiYaJinViewController">
+            <connections>
+                <outlet property="diview" destination="Ooh-rd-PUc" id="xB1-vH-ACs"/>
+                <outlet property="name" destination="sNe-ch-hU6" id="IZk-Xg-sHs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zhifubao" destination="yhQ-PU-03u" id="et8-2z-ZD2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ooh-rd-PUc">
+                    <rect key="frame" x="30" y="10" width="540" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dZ-DY-F3O">
+                            <rect key="frame" x="0.0" y="49" width="540" height="1"/>
+                            <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="hk2-lm-zTA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMc-zJ-fck">
+                            <rect key="frame" x="0.0" y="99" width="540" height="1"/>
+                            <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="glf-ZB-Qsw"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wL7-ke-qrm">
+                            <rect key="frame" x="0.0" y="0.0" width="540" height="49"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的支付宝账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-PU-03u">
+                                    <rect key="frame" x="12" y="2" width="516" height="45"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="yhQ-PU-03u" firstAttribute="top" secondItem="wL7-ke-qrm" secondAttribute="top" constant="2" id="Cw8-9A-aPy"/>
+                                <constraint firstItem="yhQ-PU-03u" firstAttribute="leading" secondItem="wL7-ke-qrm" secondAttribute="leading" constant="12" id="NKg-aV-Azm"/>
+                                <constraint firstAttribute="bottom" secondItem="yhQ-PU-03u" secondAttribute="bottom" constant="2" id="Y1V-Bk-x39"/>
+                                <constraint firstAttribute="trailing" secondItem="yhQ-PU-03u" secondAttribute="trailing" constant="12" id="un9-TF-2gd"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-sT-oua">
+                            <rect key="frame" x="0.0" y="50" width="540" height="49"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="支付宝账户真实姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNe-ch-hU6">
+                                    <rect key="frame" x="12" y="5" width="250" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="PAA-Zc-Z85"/>
+                                        <constraint firstAttribute="height" constant="40" id="bEf-vm-7hw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="sNe-ch-hU6" firstAttribute="centerY" secondItem="lbS-sT-oua" secondAttribute="centerY" id="dcH-Fw-r7A"/>
+                                <constraint firstItem="sNe-ch-hU6" firstAttribute="leading" secondItem="lbS-sT-oua" secondAttribute="leading" constant="12" id="lTv-Yy-l4h"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lbS-sT-oua" firstAttribute="leading" secondItem="Ooh-rd-PUc" secondAttribute="leading" id="4Aw-LG-aVt"/>
+                        <constraint firstItem="RMc-zJ-fck" firstAttribute="top" secondItem="3dZ-DY-F3O" secondAttribute="bottom" constant="49" id="8ch-UR-dti"/>
+                        <constraint firstAttribute="trailing" secondItem="wL7-ke-qrm" secondAttribute="trailing" id="8yM-yg-wh7"/>
+                        <constraint firstItem="3dZ-DY-F3O" firstAttribute="top" secondItem="wL7-ke-qrm" secondAttribute="bottom" id="AjZ-MC-Bnx"/>
+                        <constraint firstItem="RMc-zJ-fck" firstAttribute="top" secondItem="lbS-sT-oua" secondAttribute="bottom" id="E1d-p0-fSh"/>
+                        <constraint firstItem="wL7-ke-qrm" firstAttribute="top" secondItem="Ooh-rd-PUc" secondAttribute="top" id="HE9-lh-G2k"/>
+                        <constraint firstItem="wL7-ke-qrm" firstAttribute="leading" secondItem="Ooh-rd-PUc" secondAttribute="leading" id="L8O-GZ-Axv"/>
+                        <constraint firstItem="3dZ-DY-F3O" firstAttribute="top" secondItem="Ooh-rd-PUc" secondAttribute="top" constant="49" id="M40-p0-6R7"/>
+                        <constraint firstItem="RMc-zJ-fck" firstAttribute="leading" secondItem="Ooh-rd-PUc" secondAttribute="leading" id="Pl1-Tv-DdJ"/>
+                        <constraint firstAttribute="height" constant="100" id="R0N-vg-xjq"/>
+                        <constraint firstAttribute="trailing" secondItem="lbS-sT-oua" secondAttribute="trailing" id="RXh-Si-0rf"/>
+                        <constraint firstAttribute="trailing" secondItem="3dZ-DY-F3O" secondAttribute="trailing" id="Tup-Vi-1JS"/>
+                        <constraint firstItem="3dZ-DY-F3O" firstAttribute="leading" secondItem="Ooh-rd-PUc" secondAttribute="leading" id="g1J-Jd-3FD"/>
+                        <constraint firstItem="lbS-sT-oua" firstAttribute="top" secondItem="3dZ-DY-F3O" secondAttribute="bottom" id="mzw-X6-GUI"/>
+                        <constraint firstAttribute="trailing" secondItem="RMc-zJ-fck" secondAttribute="trailing" id="x0A-qn-fec"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="324534" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fp-Ex-xQ9">
+                    <rect key="frame" x="30" y="120" width="540" height="100.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="vXH-es-v0X"/>
+                    </constraints>
+                    <string key="text">提示：图书借阅押金仅限宝宝退学、转学、毕业等离园情况下申请退款。如有其他特殊情况请进行备注；
+退款登记填写的退款账号及姓名需与您充值时使用的支付账号及姓名一致，否则无法通过审核；
+退款登记需要保证您所有已借图书都已归还且无预借记录，否则将无法通过审核；
+退款登记提交后，智慧树教育会核实退还押金条件，核实后将在7个工作日内完成退款。</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="vXH-es-v0X"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3fp-Ex-xQ9" firstAttribute="top" secondItem="Ooh-rd-PUc" secondAttribute="bottom" constant="10" id="0Ag-dh-mcH"/>
+                <constraint firstAttribute="bottom" secondItem="Ooh-rd-PUc" secondAttribute="bottom" constant="370" id="6DM-39-0EO"/>
+                <constraint firstItem="3fp-Ex-xQ9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="BCz-iA-T70"/>
+                <constraint firstAttribute="trailing" secondItem="3fp-Ex-xQ9" secondAttribute="trailing" constant="30" id="Ihn-97-amj"/>
+                <constraint firstItem="Ooh-rd-PUc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="ORz-2Y-3sg"/>
+                <constraint firstAttribute="trailing" secondItem="Ooh-rd-PUc" secondAttribute="trailing" constant="30" id="bG3-n8-QzJ"/>
+                <constraint firstItem="Ooh-rd-PUc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="pc4-1Z-9cw"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="6DM-39-0EO"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="223" y="332"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZHSSchoolbagDetailMiaoShuTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="别让坏脾气毁了你：任何场合都不是空" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7S-03-PZO">
+                        <rect key="frame" x="14" y="8" width="347" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="c5L-WF-46d"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWV-ZV-ZS6">
+                        <rect key="frame" x="0.0" y="2" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="hlY-sZ-LK4"/>
+                            <constraint firstAttribute="height" constant="1" id="mHd-8O-HFQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mHd-8O-HFQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当时他就这身穿着打扮,我看他带着口罩,担心可能是小偷,还走过去问他买啥。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hka-yM-7Tx">
+                        <rect key="frame" x="14" y="34" width="339" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gD-Fk-DTh">
+                        <rect key="frame" x="0.0" y="72" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="JQ8-Uo-itL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hka-yM-7Tx" secondAttribute="trailing" constant="14" id="1yY-E3-UJd"/>
+                    <constraint firstItem="9gD-Fk-DTh" firstAttribute="top" secondItem="Hka-yM-7Tx" secondAttribute="bottom" constant="12" id="28R-Ca-qgJ"/>
+                    <constraint firstAttribute="trailing" secondItem="jWV-ZV-ZS6" secondAttribute="trailing" id="2aa-yb-oiU"/>
+                    <constraint firstAttribute="trailing" secondItem="Hka-yM-7Tx" secondAttribute="trailing" constant="22" id="4nf-Fk-Udn"/>
+                    <constraint firstItem="Hka-yM-7Tx" firstAttribute="leading" secondItem="Y7S-03-PZO" secondAttribute="leading" id="5EV-7d-0LP"/>
+                    <constraint firstAttribute="trailing" secondItem="Y7S-03-PZO" secondAttribute="trailing" constant="14" id="7UX-eZ-ngg"/>
+                    <constraint firstItem="9gD-Fk-DTh" firstAttribute="top" secondItem="Hka-yM-7Tx" secondAttribute="bottom" id="9l9-bw-FpY"/>
+                    <constraint firstItem="jWV-ZV-ZS6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="FM0-4H-f0z"/>
+                    <constraint firstAttribute="trailing" secondItem="9gD-Fk-DTh" secondAttribute="trailing" id="KZ0-31-1RX"/>
+                    <constraint firstItem="jWV-ZV-ZS6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LeI-ND-Xsy"/>
+                    <constraint firstItem="Hka-yM-7Tx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="SKa-DS-vZu"/>
+                    <constraint firstItem="Y7S-03-PZO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="ahr-Qy-kds"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9gD-Fk-DTh" secondAttribute="bottom" constant="-8" id="c5I-UV-GdB"/>
+                    <constraint firstItem="Hka-yM-7Tx" firstAttribute="top" secondItem="Y7S-03-PZO" secondAttribute="bottom" constant="8" symbolic="YES" id="cNs-kx-92G"/>
+                    <constraint firstItem="9gD-Fk-DTh" firstAttribute="top" secondItem="Hka-yM-7Tx" secondAttribute="bottom" constant="4" id="hkq-Cm-Uf2"/>
+                    <constraint firstItem="9gD-Fk-DTh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pL7-TW-INH"/>
+                    <constraint firstItem="Hka-yM-7Tx" firstAttribute="top" secondItem="Y7S-03-PZO" secondAttribute="bottom" constant="8" id="sXw-5K-NUX"/>
+                    <constraint firstItem="Y7S-03-PZO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uzY-oS-REQ"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="1yY-E3-UJd"/>
+                        <exclude reference="5EV-7d-0LP"/>
+                        <exclude reference="cNs-kx-92G"/>
+                        <exclude reference="28R-Ca-qgJ"/>
+                        <exclude reference="9l9-bw-FpY"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="des" destination="Hka-yM-7Tx" id="eKm-vQ-Lh6"/>
+                <outlet property="titleL" destination="Y7S-03-PZO" id="oMB-d9-i3w"/>
+            </connections>
+            <point key="canvasLocation" x="392.5" y="210"/>
+        </tableViewCell>
+    </objects>
+</document>

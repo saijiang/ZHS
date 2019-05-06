@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHSOrderViewController">
+            <connections>
+                <outlet property="backgroundView" destination="CJl-9e-WYQ" id="TdH-Sj-xvr"/>
+                <outlet property="listTableview" destination="EWV-bj-KYb" id="sWL-30-28s"/>
+                <outlet property="tableview" destination="G2e-Un-VjH" id="S3f-cw-OpG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G2e-Un-VjH">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="545"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-z4-F9Z" customClass="MMLineBorderButton">
+                    <rect key="frame" x="30" y="555" width="540" height="40"/>
+                    <color key="backgroundColor" red="0.4039215686" green="0.78039215689999997" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7sq-5A-Rik"/>
+                    </constraints>
+                    <state key="normal" title="确认借阅">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJl-9e-WYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ppy-z4-F9Z" secondAttribute="trailing" constant="30" id="1Qu-lP-crg"/>
+                <constraint firstItem="Ppy-z4-F9Z" firstAttribute="top" secondItem="G2e-Un-VjH" secondAttribute="bottom" constant="10" id="Bgl-93-LLj"/>
+                <constraint firstAttribute="trailing" secondItem="G2e-Un-VjH" secondAttribute="trailing" id="Rim-q6-e9N"/>
+                <constraint firstAttribute="trailing" secondItem="CJl-9e-WYQ" secondAttribute="trailing" id="WRG-M9-1RF"/>
+                <constraint firstItem="G2e-Un-VjH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X3C-xD-2Vr"/>
+                <constraint firstItem="G2e-Un-VjH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="coj-BO-KVt"/>
+                <constraint firstAttribute="bottom" secondItem="Ppy-z4-F9Z" secondAttribute="bottom" constant="5" id="fTV-UG-LBq"/>
+                <constraint firstItem="Ppy-z4-F9Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="iSl-6n-nPn"/>
+                <constraint firstAttribute="bottom" secondItem="CJl-9e-WYQ" secondAttribute="bottom" id="sGi-3y-5jb"/>
+                <constraint firstItem="CJl-9e-WYQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uWL-LQ-ZFX"/>
+                <constraint firstItem="CJl-9e-WYQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zb7-s4-6bP"/>
+            </constraints>
+            <point key="canvasLocation" x="-79" y="-109"/>
+        </view>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EWV-bj-KYb">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+        </tableView>
+    </objects>
+</document>
